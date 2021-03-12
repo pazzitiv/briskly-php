@@ -1,10 +1,18 @@
 {
     "name": "amustafin/briskly-php",
+    "description": "Тестовое задание для компании Briskly",
     "authors": [
         {
             "name": "Алексей Мустафин",
             "email": "pazzitiv@gmail.com"
         }
     ],
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "Monolog\\": "packages/"
+        }
+    },
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.17"
+    }
 }
