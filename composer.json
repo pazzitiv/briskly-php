@@ -8,11 +8,10 @@
         }
     ],
     "autoload": {
-        "psr-4": {
-            "Monolog\\": "packages/"
-        }
+        "psr-4": { "": "src/" }
     },
     "require": {
-        "phpoffice/phpspreadsheet": "^1.17"
+        "phpoffice/phpspreadsheet": "^1.17",
+        "vlucas/phpdotenv": "^5.3"
     }
 }
