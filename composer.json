@@ -1,0 +1,10 @@
+{
+    "name": "amustafin/briskly-php",
+    "authors": [
+        {
+            "name": "Алексей Мустафин",
+            "email": "pazzitiv@gmail.com"
+        }
+    ],
+    "require": {}
+}
