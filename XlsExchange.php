@@ -57,10 +57,13 @@ class XlsExchange implements IExchanger
                 $ftp->connect()
                     ->send($this->xlsxFile)
                     ->disconnect();
+
+                unlink($this->xlsxFile);
             } else {
-                header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-                header('Content-Disposition: attachment; filename="' . $this->xlsxFilename . '"');
-                $writer->save('php://output');
+                #header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+                #header('Content-Disposition: attachment; filename="' . $this->xlsxFilename . '"');
+                #$writer->save('php://output');
+                $writer->save($this->xlsxFile);
             }
         } catch(Exception $exception) {
             die("[{$exception->getCode()}] {$exception->getMessage()}");
